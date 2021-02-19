@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="studentFactory" class="cwh.week5.beanconfig.beans.StudentFactory"/>
+
+  <bean id="jenny" class="cwh.week5.beanconfig.beans.Student">
+    <constructor-arg index="0" value="jenny"/>
+  </bean>
+
+  <bean id="molly" class="cwh.week5.beanconfig.beans.Student">
+    <constructor-arg index="0" value="molly"/>
+  </bean>
+
+  <!-- not sure why this is not working -->
+  <!--<bean id="random1" factory-bean="studentFactory" factory-method="getObject"/>-->
+
+  <bean id="klass" class="cwh.week5.beanconfig.beans.Klass" scope="prototype">
+    <property name="students">
+      <list>
+        <ref bean="jenny"/>
+        <ref bean="molly"/>
+        <!--<ref bean="random1"/>-->
+      </list>
+    </property>
+  </bean>
+</beans>
