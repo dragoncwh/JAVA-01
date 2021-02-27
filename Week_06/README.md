@@ -3,16 +3,8 @@
 
 ## 第12节课作业
 
+
 2、(必做):基于电商交易场景(用户、商品、订单)，设计一套简单的表结构，提交DDL 的 SQL 文件到 Github(后面2周的作业依然要是用到这个表结构)。
-
-> 路径: bean-config-w5
-
-> XML: XMLConfig.java
-
-> Annotation: AnnotationConfig.java
-
-> AutowiredConfig: AutowiredConfig.java
-
 
 
 ### 用户表
@@ -21,7 +13,7 @@
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`
 (
-	`user_id` INT(20) NOT NULL AUTO_INCREMENT,
+  `user_id` INT(20) NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(32) NOT NULL COMMENT '用户登录名',
   `nickname` VARCHAR(64) NOT NULL COMMENT '用户昵称',
   `avatar_url` VARCHAR(255) DEFAULT NULL,
@@ -48,7 +40,7 @@ CREATE TABLE `users`
 DROP TABLE IF EXISTS `commodity_info`;
 CREATE TABLE `commodity_info`
 (
-	`commodity_id` BIGINT NOT NULL AUTO_INCREMENT,
+  `commodity_id` BIGINT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(32) NOT NULL COMMENT '商品名称',
   `description` VARCHAR(64) NOT NULL COMMENT '商品描述',
   `price` DECIMAL(10, 2) NOT NULL,
