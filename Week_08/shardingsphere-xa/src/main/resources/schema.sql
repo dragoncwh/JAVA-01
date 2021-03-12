@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS `t_order_0`;
+DROP TABLE IF EXISTS `t_order_1`;
+DROP TABLE IF EXISTS `t_order_2`;
+CREATE TABLE `t_order_0` (`id` bigint NOT NULL,`shipping_id` bigint DEFAULT NULL,`payment_id` bigint DEFAULT NULL,`user_id` int NOT NULL,`order_status` tinyint NOT NULL DEFAULT '1' COMMENT '订单状态: 0.取消; 1.未支付; 2.已支付; 3.等待发货; 4.已发货; 5.已签收; 6.退货申请; 7.退货完成',`create_time` timestamp NOT NULL,`update_time` timestamp NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `t_order_1` (`id` bigint NOT NULL,`shipping_id` bigint DEFAULT NULL,`payment_id` bigint DEFAULT NULL,`user_id` int NOT NULL,`order_status` tinyint NOT NULL DEFAULT '1' COMMENT '订单状态: 0.取消; 1.未支付; 2.已支付; 3.等待发货; 4.已发货; 5.已签收; 6.退货申请; 7.退货完成',`create_time` timestamp NOT NULL,`update_time` timestamp NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `t_order_2` (`id` bigint NOT NULL,`shipping_id` bigint DEFAULT NULL,`payment_id` bigint DEFAULT NULL,`user_id` int NOT NULL,`order_status` tinyint NOT NULL DEFAULT '1' COMMENT '订单状态: 0.取消; 1.未支付; 2.已支付; 3.等待发货; 4.已发货; 5.已签收; 6.退货申请; 7.退货完成',`create_time` timestamp NOT NULL,`update_time` timestamp NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
